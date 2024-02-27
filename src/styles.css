@@ -4,7 +4,9 @@
 
 header{
     display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-columns: 1fr 8fr 2fr;
+    margin-bottom: 30px;
+    justify-content: center;
 }
 
 .nav-button{
@@ -14,6 +16,7 @@ header{
 }
 
 .order{
+    font-size: medium;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -21,6 +24,37 @@ header{
     background-color: rgb(255, 188, 13)
 }
 
+#content{
+    margin: auto;
+    width: 90%;
+    display: block;
+}
+
 .promo{
-    width: 100vw;
+    width: 95%;
+}
+
+h2{
+    font-size: 2em;
+    margin: 0;
+}
+
+.textDiv{
+    display: block;
+}
+
+@media (min-width: 1000px) {
+    #content{
+        width: 75%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    #content{
+        width: 60%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
 }
