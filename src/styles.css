@@ -3,13 +3,21 @@
 }
 
 header{
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 8fr 2fr;
+    grid-template-columns: 1fr 4fr 1fr;
     margin-bottom: 30px;
-    justify-content: center;
+    width: 90%;
+}
+
+
+nav{
+    display: flex;
+    align-content: center;
 }
 
 .nav-button{
+    font-size: medium;
     border: none;
     cursor: pointer;
     background-color: white;
@@ -31,7 +39,11 @@ header{
 }
 
 .promo{
-    width: 95%;
+    width: 100%;
+}
+
+.textDiv{
+    display: block;
 }
 
 h2{
@@ -39,15 +51,17 @@ h2{
     margin: 0;
 }
 
-.textDiv{
-    display: block;
-}
-
 @media (min-width: 960px) {
+    header{
+        width: 75%;
+    }
     #content{
         width: 75%;
         display: grid;
         grid-template-columns: 2fr 1fr;
+    }
+    .textDiv{
+        padding-left: 2em;
     }
 }
 
