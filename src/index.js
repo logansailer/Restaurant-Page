@@ -5,6 +5,8 @@ import logo from './logo.jpg';
 
 //header and page selection document queries
 const logoDiv = document.querySelector('#logo')
+const homeBtn = document.querySelector('#home')
+const menuBtn = document.querySelector('#menu')
 const contentDiv = document.querySelector('#content')
 const mcLogo = new Image()
 mcLogo.src = logo;
@@ -43,4 +45,12 @@ function home() {
     loadHome(hamburglerPromo, hamburglerHeading, hamburglerText)
 }
 
+function menu(){
+    contentDiv.innerHTML = "";
+    
+}
+
+//loads home on page load, other pages on click
 home()
+homeBtn.addEventListener('click', home);
+menuBtn.addEventListener('click', menu);
