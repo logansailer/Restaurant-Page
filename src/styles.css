@@ -23,6 +23,11 @@ nav{
     background-color: white;
 }
 
+a{
+    margin: auto;
+    text-decoration: none;
+}
+
 .order{
     font-size: medium;
     border: none;
@@ -40,10 +45,12 @@ nav{
 
 .promo{
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .textDiv{
     display: block;
+    margin-bottom: 60px;
 }
 
 h2{
@@ -53,10 +60,11 @@ h2{
 
 @media (min-width: 960px) {
     header{
-        width: 75%;
+        width: 960px;
+        margin-bottom: 60px;
     }
     #content{
-        width: 75%;
+        width: 960px;
         display: grid;
         grid-template-columns: 2fr 1fr;
     }
@@ -64,4 +72,6 @@ h2{
         padding-left: 2em;
     }
 }
+
+
 
