@@ -73,5 +73,10 @@ h2{
     }
 }
 
-
+.menuTitle{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
