@@ -1,14 +1,14 @@
 import './styles.css';
 import wcDonaldsPromo from './wcdonalds.jpg';
-import hamburglerPromo from './hamburgler.jpg'
+import hamburglerPromo from './hamburgler.jpg';
 import logo from './logo.jpg';
 
 //header and page selection document queries
-const logoDiv = document.querySelector('#logo')
-const homeBtn = document.querySelector('#home')
-const menuBtn = document.querySelector('#menu')
-const contentDiv = document.querySelector('#content')
-const mcLogo = new Image()
+const logoDiv = document.querySelector('#logo');
+const homeBtn = document.querySelector('#home');
+const menuBtn = document.querySelector('#menu');
+const contentDiv = document.querySelector('#content');
+const mcLogo = new Image();
 mcLogo.src = logo;
 logoDiv.appendChild(mcLogo);
 
@@ -20,37 +20,42 @@ const hamburglerText = `You're gonna love the hotter, juicier, tastier upgrades 
 
 function loadHome(adImg, adHeading, adText) {
     //adds promo image to home page
-    const myPromo = new Image()
+    const myPromo = new Image();
     myPromo.src = adImg;
     myPromo.classList.add('promo');
     contentDiv.appendChild(myPromo);
 
     //adds caption under promo image
-    const textField = document.createElement('div')
-    textField.classList.add('textDiv')
+    const textField = document.createElement('div');
+    textField.classList.add('textDiv');
     const advert = document.createElement("h2");
     const adCaption = document.createTextNode(adHeading);
     const advertTextElement = document.createElement("p");
-    const adSubText = document.createTextNode(adText)
+    const adSubText = document.createTextNode(adText);
     advertTextElement.appendChild(adSubText);
     advert.appendChild(adCaption);
     textField.appendChild(advert);
     textField.appendChild(advertTextElement);
-    contentDiv.appendChild(textField)
-}
+    contentDiv.appendChild(textField);
+};
+
+function loadItem() {
+
+};
 
 //loads home page
 function home() {
-    loadHome(wcDonaldsPromo, wcDonaldsHeading, wcDonaldsText)
-    loadHome(hamburglerPromo, hamburglerHeading, hamburglerText)
-}
+    loadHome(wcDonaldsPromo, wcDonaldsHeading, wcDonaldsText);
+    loadHome(hamburglerPromo, hamburglerHeading, hamburglerText);
+};
 
+//iterates over menu object, adding each item within
 function menu(){
     contentDiv.innerHTML = "";
-    
-}
+    loadItem();
+};
 
 //loads home on page load, other pages on click
-home()
+home();
 homeBtn.addEventListener('click', home);
 menuBtn.addEventListener('click', menu);
