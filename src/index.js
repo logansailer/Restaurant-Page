@@ -19,8 +19,6 @@ const hamburglerHeading = `McD's Best Burgers Ever.” - Hamburglar`;
 const hamburglerText = `You're gonna love the hotter, juicier, tastier upgrades we've made to burgers like our Cheeseburger and Double Cheeseburger.* From patties grilled with onions and perfectly melted cheese to new soft, pillowy buns—these are our best burgers yet. Ask the Hamburglar, he can't keep his hands off of 'em. Robble, robble.`;
 
 function loadHome(adImg, adHeading, adText) {
-    //clears div if from another page
-    contentDiv.innerHTML = ""
     //adds promo image to home page
     const myPromo = new Image();
     myPromo.src = adImg;
@@ -52,6 +50,9 @@ function loadMenuNav()  {
     contentDiv.appendChild(titleDiv);
 
     //sets grid to load menu items into
+    const menuGrid = document.createElement('div');
+    menuGrid.classList.add('menuGrid');
+    contentDiv.appendChild(menuGrid);
 }
 
 function loadFavorites() {
@@ -73,6 +74,8 @@ function loadBreakfast() {
 
 //loads home page
 function home() {
+    //clers content if coming from a different page, then loads each promotion
+    contentDiv.innerHTML = "";
     loadHome(wcDonaldsPromo, wcDonaldsHeading, wcDonaldsText);
     loadHome(hamburglerPromo, hamburglerHeading, hamburglerText);
 };
