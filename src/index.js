@@ -2,6 +2,10 @@ import './styles.css';
 import wcDonaldsPromo from './wcdonalds.jpg';
 import hamburglerPromo from './hamburgler.jpg';
 import logo from './logo.jpg';
+import breakfastImg from './breakfast.jpg';
+import burgersImg from './burgers.jpg';
+import chickenImg from './chicken.jpg';
+import sidesImg from './sides.jpg';
 
 //header and page selection document queries
 const logoDiv = document.querySelector('#logo');
@@ -53,23 +57,17 @@ function loadMenuNav()  {
     const menuGrid = document.createElement('div');
     menuGrid.classList.add('menuGrid');
     contentDiv.appendChild(menuGrid);
+
+    //creates menu nav elements
+    const breakfastNav = document.createElement('div');
+    const burgersNav = document.createElement('div');
+    const chickenNav = document.createElement('div');
+    const sidesNav = document.createElement('div');
+    menuGrid.appendChild(breakfastNav);
+    menuGrid.appendChild(burgersNav);
+    menuGrid.appendChild(chickenNav);
+    menuGrid.appendChild(sidesNav);
 }
-
-function loadFavorites() {
-
-};
-
-function loadBurgers() {
-
-};
-
-function loadChicken() {
-
-};
-
-function loadBreakfast() {
-    
-};
 
 
 //loads home page
