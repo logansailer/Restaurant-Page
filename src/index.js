@@ -44,13 +44,16 @@ function loadHome(adImg, adHeading, adText) {
 };
 
 function loadMenuNav()  {
-    function addMenuSection(sectionName, img) {
+    function addMenuSection(sectionName, img, caption) {
         sectionName = document.createElement('div');
         sectionName.classList.add('menuItem');
-        menuGrid.appendChild(sectionName);
+        const sectionCaption = document.createElement('h3');
+        const sectionCaptionText = document.createTextNode(caption);
+        sectionCaption.appendChild(sectionCaptionText)
         let selectionImg = new Image();
         selectionImg.src = img;
         sectionName.appendChild(selectionImg);
+        sectionName.appendChild(sectionCaption)
         menuGrid.appendChild(sectionName)
     }
 
@@ -73,10 +76,10 @@ function loadMenuNav()  {
     let burgersNav;
     let chickenNav;
     let sidesNav;
-    addMenuSection(breakfastNav, breakfastImg);
-    addMenuSection(burgersNav, burgersImg);
-    addMenuSection(chickenNav, chickenImg);
-    addMenuSection(sidesNav, sidesImg);
+    addMenuSection(breakfastNav, breakfastImg, 'Breakfast');
+    addMenuSection(burgersNav, burgersImg, 'Burgers');
+    addMenuSection(chickenNav, chickenImg, 'Chicken');
+    addMenuSection(sidesNav, sidesImg, 'Sides');
 }
 
 //takes given section name and populates menuGrid with it
