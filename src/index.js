@@ -46,10 +46,10 @@ function loadHome(adImg, adHeading, adText) {
 function loadMenuNav()  {
     function addMenuSection(sectionName, img) {
         sectionName = document.createElement('div');
+        sectionName.classList.add('menuItem');
         menuGrid.appendChild(sectionName);
         let selectionImg = new Image();
         selectionImg.src = img;
-        selectionImg.classList.add('menuItem');
         sectionName.appendChild(selectionImg);
         menuGrid.appendChild(sectionName)
     }
@@ -91,7 +91,7 @@ function home() {
 };
 
 //iterates over menu object, adding each item within
-function menu(){
+function menu() {
     contentDiv.innerHTML = "";
     loadMenuNav();
 };
