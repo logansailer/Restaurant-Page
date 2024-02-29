@@ -44,6 +44,16 @@ function loadHome(adImg, adHeading, adText) {
 };
 
 function loadMenuNav()  {
+    function addMenuSection(sectionName, img) {
+        sectionName = document.createElement('div');
+        menuGrid.appendChild(sectionName);
+        let selectionImg = new Image();
+        selectionImg.src = img;
+        selectionImg.classList.add('menuItem');
+        sectionName.appendChild(selectionImg);
+        menuGrid.appendChild(sectionName)
+    }
+
     //creates page title
     const titleDiv = document.createElement('div');
     const title = document.createElement('h1');
@@ -58,16 +68,18 @@ function loadMenuNav()  {
     menuGrid.classList.add('menuGrid');
     contentDiv.appendChild(menuGrid);
 
-    //creates menu nav elements
-    const breakfastNav = document.createElement('div');
-    const burgersNav = document.createElement('div');
-    const chickenNav = document.createElement('div');
-    const sidesNav = document.createElement('div');
-    menuGrid.appendChild(breakfastNav);
-    menuGrid.appendChild(burgersNav);
-    menuGrid.appendChild(chickenNav);
-    menuGrid.appendChild(sidesNav);
+    //function to creates menu nav elements
+    let breakfastNav;
+    let burgersNav;
+    let chickenNav;
+    let sidesNav;
+    addMenuSection(breakfastNav, breakfastImg);
+    addMenuSection(burgersNav, burgersImg);
+    addMenuSection(chickenNav, chickenImg);
+    addMenuSection(sidesNav, sidesImg);
 }
+
+//takes given section name and populates menuGrid with it
 
 
 //loads home page
